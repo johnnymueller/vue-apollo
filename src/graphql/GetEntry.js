@@ -1,10 +1,6 @@
 import gql from "graphql-tag"
 
 export default gql `query {
-  # Speaker(id:"cji5oo5sh12ba01272zbhrx3g") {
-  #   bio
-  #   name
-  # }
 
   entry(id:169) {
     title

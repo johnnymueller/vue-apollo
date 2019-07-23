@@ -4,7 +4,6 @@ import App from './App.vue'
 import ApolloClient from 'apollo-boost'
 const apolloClient = new ApolloClient({
   // You should use an absolute URL here
-  // uri: 'https://api.graphcms.com/simple/v1/awesomeTalksClone'
   uri: 'https://ngpoc.frb.io/api',
   // uri: 'http://ngpoc.test/api',
   request: async operation => {
@@ -15,6 +14,11 @@ const apolloClient = new ApolloClient({
     });
   },
 })
+
+// NOTE @lindsey: the following would be needed to be added in place of the above config
+//    in order to get around the fragment cache issue. More info:
+//    https://github.com/markhuot/craftql/issues/67
+//    https://www.apollographql.com/docs/react/advanced/boost-migration/#advanced-migration
 
 // import { ApolloClient } from 'apollo-client'
 // import { createHttpLink } from 'apollo-link-http'
